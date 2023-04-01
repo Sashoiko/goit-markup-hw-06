@@ -857,6 +857,7 @@ body {
         margin-bottom: 16px;
         outline: transparent;
         resize: none;
+        
 }
 
 .modal-textarea:focus{
