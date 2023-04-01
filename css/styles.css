@@ -104,7 +104,7 @@ body {
         letter-spacing: 0.04em;
         color: var(--color-link-and-btn);
         background: var(--color-background-team-btn);
-        border: 1px, solid, var(--color-border-btn-footlogo);
+        border: 1px solid var(--color-link-and-btn);
         border-radius: 4px;
         cursor: pointer;
 }
@@ -700,9 +700,10 @@ body {
 
 .footer-input{
         border: 1px solid #FFFFFF;
+        outline: none;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
-        background: #2E2F42;
+        background: var(--color-body);
         margin-right: 24px;
         padding: 8px 16px;
 }
@@ -714,7 +715,7 @@ body {
         display: flex;
         align-items: center;
         letter-spacing: 0.04em;
-        color: #FFFFFF;
+        color: var(--color-background);
 }
 
 .subscribe-icon-blok{
@@ -729,9 +730,9 @@ body {
         align-items: center;
         text-align: center;
         letter-spacing: 0.04em;
-        color: #FFFFFF;
+        color: var(--color-background);
         padding: 8px 64px 8px 24px;
-        background: #4D5AE5;
+        background: var(--color-link-and-btn);
         border-radius: 4px;
 }
 
@@ -754,7 +755,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        transition: opacity 250ms , visibility 250ms;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -762,7 +763,7 @@ body {
         max-width: 408px;
         width: 100%;
         min-height: 576px;
-        padding: 15px;
+        padding: 24px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -771,15 +772,12 @@ body {
         background: var(--color-modal-background);
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
-        transition: opacity 250ms , visibility 250ms;       
 }
 
 
 .modal-close{
         width: 24px;
         height: 24px;
-        margin-top: 24px;
-        margin-right: 24px;
         display: block;
         margin-left: auto;
         background: var(--color-border-btn-footlogo);
@@ -811,9 +809,9 @@ body {
         line-height: 1.5;
         text-align: center;
         letter-spacing: 0.02em;
-        color: #2E2F42;
+        color: var(--color-body);
         margin-top: 24px;
-        margin-bottom: 34px;
+        margin-bottom: 16px;
            
 }
 
@@ -821,12 +819,12 @@ body {
         width: 100%;
         border: 1px solid rgba(46, 47, 66, 0.4);
         border-radius: 4px;
-        padding: 5px 38px;
+        padding: 11px 38px;
         outline: transparent;
 
 }
 .modal-input:focus{
-        border: 1px solid #4D5AE5;
+        border: 1px solid var(--color-link-and-btn);
         border-radius: 4px;
 }
 
@@ -844,7 +842,7 @@ body {
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.01em;
-        color: #8E8F99;
+        color: var(--color-link-customers);
         margin-bottom: 4px;
 }
 
@@ -852,17 +850,17 @@ body {
         display: block;
         width: 100%;
         min-height: 120px;
-        background: #FCFCFC;
-        border-radius: 4px
+        background: var(--color-modal-background);
+        border-radius: 4px;
         border: 1px solid rgba(46, 47, 66, 0.4);
         padding: 8px 16px;
+        margin-bottom: 16px;
         outline: transparent;
         resize: none;
 }
 
 .modal-textarea:focus{
-        border: 1px solid #4D5AE5;
-        border-radius: 4px;
+        border: 1px solid var(--color-link-and-btn);
 }
 
 
@@ -874,12 +872,16 @@ body {
 }
 
 .input-blok{
+        display: block;
         position: relative;
 
 }
 
 .input-checkbox:checked + .lable-checkbox::before{
-        background-color: #404BBF;
+        background-color: var(--hover-color-mail-tel-btn);
+        background-image: url(../images/Vector8.svg);
+        background-repeat: no-repeat;
+        background-position: center;
 }
 
 .lable-checkbox{
@@ -890,7 +892,7 @@ body {
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.04em;
-        color: #8E8F99;
+        color: var(--color-link-customers);
 }
 
 .lable-checkbox::before{
@@ -900,13 +902,6 @@ body {
         border: 1px solid rgba(46, 47, 66, 0.4);
         border-radius: 2px;
         margin-right: 8px;
-}
-
-.checkbox-svg{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left: 3px;
 }
 
 .checkbox-blok{
